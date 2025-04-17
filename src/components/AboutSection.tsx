@@ -1,6 +1,6 @@
-
-import { User } from "lucide-react";
+import { User, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   return (
@@ -22,7 +22,6 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="w-full md:w-1/2">
             <div className="relative">
-              {/* Replace with your actual image */}
               <div className="w-full h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center text-portfolio-gray">
                 <span className="text-xl">About Image</span>
               </div>
@@ -51,6 +50,16 @@ const AboutSection = () => {
               interactive digital experiences. Since then, I've worked on various projects ranging 
               from small business websites to complex web applications.
             </p>
+            
+            <div className="flex items-center space-x-4 pt-4">
+              <Button 
+                className="bg-portfolio-blue hover:bg-portfolio-lightblue text-white"
+                onClick={() => window.open('/resume.pdf', '_blank')}
+              >
+                <FileText className="mr-2" size={20} />
+                Download Resume
+              </Button>
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               <Card className="border-portfolio-lightgray">
